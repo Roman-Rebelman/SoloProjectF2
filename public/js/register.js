@@ -1,42 +1,42 @@
-const form = document.querySelector('#loginForm');
+const form = document.querySelector("#loginForm");
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = new FormData(form);
   const res = Object.fromEntries(data);
-  console.log('res', res);
+  console.log("res", res);
   if (!res.email || !res.password) {
-    alert('Введите свои данные!');
+    alert("Введите свои данные!");
   } else {
     try {
-      const response = await fetch('/register', {
-        method: 'POST',
+      const response = await fetch("/register", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(res),
       });
 
       const result = await response.json();
 
-      const msg = document.querySelector('.regMsg');
-      const divReg = document.querySelector('.regDiv')
+      const msg = document.querySelector(".regMsg");
+      const divReg = document.querySelector(".regDiv");
       // window.location.replace('/')
       if (result.err) {
         divReg.innerText = result.err;
-        divReg.style.color = 'red';
+        divReg.style.color = "red";
 
-        document.querySelectorAll('input').forEach((el) => el.value = '');
+        document.querySelectorAll("input").forEach((el) => (el.value = ""));
       } else {
         divReg.innerText = result.msg;
-        divReg.style.color = 'green';
+        divReg.style.color = "green";
 
         form.remove();
 
-        const nav = document.querySelector('.myNav');
-        console.log('nav:', nav);
+        const nav = document.querySelector(".myNav");
+        console.log("nav:", nav);
 
-        document.querySelector('#navbarNav').remove();
+        document.querySelector("#navbarNav").remove();
 
         const html = `
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -52,7 +52,7 @@ form.addEventListener('submit', async (e) => {
         </ul>
        </div>
         `;
-        nav.insertAdjacentHTML('beforeend', html);
+        nav.insertAdjacentHTML("beforeend", html);
       }
     } catch (error) {
       console.log(`Что-то сломалось ==> ${error}`);

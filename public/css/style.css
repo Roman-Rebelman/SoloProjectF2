@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
 
-head, header{
+head,
+header {
   position: sticky;
-  top: 0
+  top: 0;
 }
 form {
   max-width: 300px;
@@ -11,12 +12,6 @@ form {
 button {
   margin-top: 15px;
 }
-
-.titleHome {
-  text-align: center;
-  color: blue;
-}
-
 body,
 html {
   height: 100%;
@@ -37,6 +32,50 @@ html {
   padding-top: 5%;
   font-family: "Balsamiq Sans", cursive;
   color: white;
-
   font-size: 20px;
+}
+.homeDiv {
+  height: 100vh;
+  
+  font-family: "Balsamiq Sans", cursive;
+  
+  background-image: url("./image/home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-right: 2%;
+}
+.titleHome {
+  /* margin-left: 40%; */
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.downList {
+  /* margin-left: 50%; */
+  font-size: 30px;
+  padding: 20px;
+}
+.titleDescription {
+  padding-top: 60px;
+  font-size: 70px;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divDescription {
+  padding-left: 2%;
+  color: white;
+  text-align: justify;
+  /* -webkit-text-stroke: 1px black; */
+  font-size: 17px;
+  font-weight: 500;
+}
+.btnDivPhoto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
