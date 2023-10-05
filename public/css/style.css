@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+head, header{
+  position: sticky;
+  top: 0
+}
+form {
+  max-width: 300px;
+}
+
+button {
+  margin-top: 15px;
+}
+
+.titleHome {
+  text-align: center;
+  color: blue;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+.globalLogDiv,
+.globalRegDiv {
+  height: 100vh;
+  background-image: url("./image/reg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logDiv,
+.regDiv {
+  width: 350px;
+  margin-left: 45%;
+  /* margin-top: 5%; */
+  padding-top: 5%;
+  font-family: "Balsamiq Sans", cursive;
+  color: white;
+
+  font-size: 20px;
+}
