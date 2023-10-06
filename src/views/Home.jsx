@@ -29,7 +29,9 @@ module.exports = function Home({ login }) {
         <div className="divDescription"></div>
         <div className="btnDivPhoto">
           <button className="btnPhoto">Показать фотографию</button>
-          <div className="divPhoto">-------</div>
+          <div className="divPhoto">
+            <img className="image" src="" />
+          </div>
         </div>
       </div>
     </Layout>
